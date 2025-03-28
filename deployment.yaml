@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: springboot-app
+  name: tasks-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: springboot-app
+      app: tasks-app
   template:
     metadata:
       labels:
-        app: springboot-app
+        app: tasks-app
     spec:
       containers:
-        - name: springboot-app
-          image: sharath198/springboot-app-extapi:latest
+        - name: tasks-app
+          image: sharukhvs/tasks-app
           imagePullPolicy: Always
           ports:
             - containerPort: 9090
@@ -25,10 +25,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: springboot-app-service
+  name: tasks-app-service
 spec:
   selector:
-    app: springboot-app
+    app: tasks-app
   ports:
     - protocol: TCP
       port: 80
