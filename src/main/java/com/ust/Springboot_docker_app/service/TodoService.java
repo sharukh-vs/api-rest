@@ -22,5 +22,10 @@ public class TodoService {
         Todo[] todos = restTemplate.getForObject(url, Todo[].class);
         return Arrays.asList(todos);
     }
+
+//    public Todo getTodoById(int id) {
+//        String url = "https://jsonplaceholder.typicode.com/todos/" + id;
+//        return restTemplate.getForObject(url, Todo.class);
+//    }
 }
 
