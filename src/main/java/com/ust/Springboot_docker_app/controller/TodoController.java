@@ -20,9 +20,9 @@ public class TodoController {
     public List<Todo> getTodos() {
         return todoService.getTodos();
     }
-//    @GetMapping("/{id}")
-//    public Todo getTodoById(@PathVariable int id) {
-//        return todoService.getTodoById(id);
-//    }
+    @GetMapping("/{id}")
+    public Todo getTodoById(@PathVariable int id) {
+        return todoService.getTodoById(id);
+    }
 }
 
